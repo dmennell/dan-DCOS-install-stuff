@@ -1,0 +1,8 @@
+### Sample "Fault Domain Detect" file 
+### uses Hostname file to determine zone and region
+
+#!/bin/bash
+HOSTNAME_FILE=/etc/hostname
+REGION=$(cat ${HOSTNAME_FILE} | head -c4)
+ZONE=$(cat ${HOSTNAME_FILE} | head -c4)-$(cat ${HOSTNAME_FILE} | head -c8 | tail -c4)
+echo "{\"fault_domain\":{\"region\":{\"name\": \"${REGION}\"},\"zone\":{\"name\": \"${ZONE}\"}}}"
