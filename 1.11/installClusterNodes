@@ -1,0 +1,18 @@
+######################################################################
+########### DC/OS 1.11 MASTER, SLAVE, PUBLIC-SLAVE INSTALL ###########
+######################################################################
+
+#MASTER
+mkdir /tmp/dcos && cd /tmp/dcos
+curl -O http://<bootstrapIP>:80/dcos_install.sh && sudo bash dcos_install.sh master
+----------------------------------------------------------------->
+
+#PUBLIC
+mkdir /tmp/dcos && cd /tmp/dcos
+curl -O http://<bootstrapIP>:80/dcos_install.sh && sudo bash dcos_install.sh slave_public
+----------------------------------------------------------------->>
+
+#PRIVATE
+mkdir /tmp/dcos && cd /tmp/dcos
+curl -O http://<bootstrapIP>:80/dcos_install.sh && sudo bash dcos_install.sh slave
+----------------------------------------------------------------->>>
