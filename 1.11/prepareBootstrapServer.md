@@ -3,10 +3,10 @@
 ################################################
 
 # Create Directories
-''
+'
 mkdir -p dcos-install/genconf
 cd dcos-install
-''
+'
 
 # Create IP-detect (based on cloud or on-prem)
 '''
